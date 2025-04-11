@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulačka kliků pera</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <h1>⚙️ Kalkulačka kliků pera ⚙️</h1>
+    <p>Zadejte typ pera a požadovanou dávku v mg pro výpočet počtu kliknutí.</p>
+
+    <div class="calculator">
+        <div class="form-group">
+            <label for="penSelect">1. Jaké pero máš? (mg)</label>
+            <select id="penSelect">
+                </select>
+        </div>
+
+        <div class="form-group">
+            <label for="doseInput">2. Jakou dávku si chceš aplikovat? (mg)</label>
+            <input type="number" id="doseInput" step="0.01" min="0" placeholder="Zadejte dávku v mg">
+        </div>
+
+        <button id="calculateBtn">Vypočítat počet kliků</button>
+
+        <div id="result">
+            Zadejte hodnoty a klikněte na tlačítko.
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        <h2>⚠️ DŮLEŽITÉ UPOZORNĚNÍ:</h2>
+        <p>Tento nástroj je pouze orientační pomůcka založená na výpočtu z předpokládané dávky na klik dle poskytnuté tabulky.</p>
+        <p><strong>NEJEDNÁ SE O LÉKAŘSKOU RADU.</strong></p>
+        <p>Výpočet nemusí být zcela přesný a skutečná dávka se může mírně lišit. Počet kliků je zaokrouhlen na nejbližší celé číslo.</p>
+        <p>Vždy se striktně řiďte pokyny svého ošetřujícího lékaře, lékárníka nebo informacemi v příbalovém letáku léku a vizuálně kontrolujte nastavení pera.</p>
+        <p>Za správnost dávkování zodpovídá výhradně aplikující osoba.</p>
+        <p>V případě jakýchkoli pochybností nebo nejasností kontaktujte svého lékaře nebo lékárníka.</p>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>

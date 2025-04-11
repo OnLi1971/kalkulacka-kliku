@@ -1,0 +1,159 @@
+﻿body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #0056b3; /* Tmavě modrá */
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 20px auto; /* Centrovaní kalkulačky */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, input[type="number"], button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+input[type="number"] {
+     /* Můžete přidat specifické styly pro number input, pokud je třeba */
+}
+
+
+button {
+    background-color: #007bff; /* Modrá */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Tmavší modrá při najetí */
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1em;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    line-height: 1.8;
+}
+
+/* Styly pro výsledek */
+#result.result-success .clicks {
+    font-weight: bold;
+    color: #28a745; /* Zelená */
+    font-size: 1.4em;
+}
+
+#result .actual-dose {
+    display: block; /* Aby bylo na novém řádku */
+    font-size: 0.9em;
+    color: #555; /* Šedá barva pro doplňující info */
+    margin-top: 5px;
+}
+
+#result.result-error {
+    color: #dc3545; /* Červená pro chybu */
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    font-weight: bold;
+}
+
+/* Styl pro varování o překročení kapacity */
+#result .warning {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #dc3545; /* Červená barva pro varování */
+    font-size: 0.95em;
+}
+
+
+/* Disclaimer styly */
+.disclaimer {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ffc107;
+    background-color: #fff3cd;
+    color: #856404;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.disclaimer h2 {
+    color: #dc3545;
+    margin-top: 0;
+    text-align: center;
+}
+
+.disclaimer strong {
+    color: #dc3545;
+}
+
+.disclaimer p {
+    font-size: 0.9em;
+}
+
+
+/* Responzivita */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    .calculator, .disclaimer {
+        padding: 15px;
+        max-width: 95%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    #result {
+        font-size: 1em;
+    }
+    #result .clicks {
+        font-size: 1.2em;
+    }
+     #result .actual-dose {
+        font-size: 0.85em;
+    }
+    #result .warning {
+        font-size: 0.9em;
+    }
+}
