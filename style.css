@@ -74,7 +74,7 @@ button:hover {
 }
 
 /* Styly pro výsledek */
-#result.result-success .clicks {
+#result.result-success .clicks { /* Počet kliků - jedna aplikace */
     font-weight: bold;
     color: #28a745; /* Zelená */
     font-size: 1.4em;
@@ -87,6 +87,13 @@ button:hover {
     margin-top: 5px;
 }
 
+/* Nový styl pro zvýraznění rozdílu dávky */
+#result .actual-dose.dose-discrepancy {
+    color: #e67e22; /* Oranžová barva */
+    font-weight: bold;
+}
+
+
 #result.result-error {
     color: #dc3545; /* Červená pro chybu */
     background-color: #f8d7da;
@@ -94,7 +101,20 @@ button:hover {
     font-weight: bold;
 }
 
-/* Styl pro varování o překročení kapacity */
+/* Styly pro více aplikací */
+#result .multi-step-header {
+    font-weight: bold;
+    display: inline-block; /* Aby se neuplatnil margin */
+    margin-top: 5px; /* Odsazení mezi kroky */
+}
+#result .clicks-multi { /* Počet kliků - více aplikací */
+     font-weight: bold;
+     color: #0056b3; /* Modrá barva pro kliky ve více krocích */
+     font-size: 1.2em;
+}
+
+
+/* Styl pro varování (překročení kapacity nebo 2. dávka > max) */
 #result .warning {
     display: block;
     margin-top: 8px;
@@ -149,6 +169,9 @@ button:hover {
     }
     #result .clicks {
         font-size: 1.2em;
+    }
+    #result .clicks-multi {
+        font-size: 1.1em;
     }
      #result .actual-dose {
         font-size: 0.85em;
